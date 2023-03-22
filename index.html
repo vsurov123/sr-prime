@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h3>Records</h3>
+        <ul>
+        <% for (var r of records.records) { %>
+            <li><%= r.userid %> 
+                <% if (r.isprime=="true") { %>
+                    <span style="font-weight:bold;color:green">
+                <% } else { %>
+                    <span style="color:red">
+                <% } %>
+                <%= r.number %></span></li>
+        <% } %>
+        </ul>
+        Last update: <small><%= new Date(records.lastupdate).toString() %></small>
+
+    </body>
+</html>
